@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démonstration de Retrait - Prévention</title>
+    <style>
+        body { font-family: sans-serif; background: #050505; color: white; text-align: center; padding: 15px; }
+        .container { border: 2px solid #ffcc00; border-radius: 15px; padding: 20px; background: #111; max-width: 400px; margin: auto; }
+        .solde-virtuel { font-size: 2.2em; color: #00ff00; font-weight: bold; margin: 10px 0; }
+        .instruction-box { background: #222; border-left: 5px solid #ffcc00; padding: 15px; text-align: left; margin: 20px 0; font-size: 0.9em; }
+        .num-destinataire { font-size: 1.4em; color: #ffcc00; font-weight: bold; letter-spacing: 1px; }
+        .btn-check { background: #ffcc00; color: black; border: none; padding: 15px; width: 100%; font-weight: bold; border-radius: 8px; margin-top: 10px; }
+        #msg-final { display: none; color: #ff3333; font-weight: bold; margin-top: 20px; border: 1px solid red; padding: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>PORTAIL DE RETRAIT</h2>
+        <p>Vos gains accumulés :</p>
+        <div class="solde-virtuel">45 000 FCFA</div>
+
+        <div class="instruction-box">
+            <b>PROCÉDURE DE DÉBLOCAGE :</b><br>
+            Pour recevoir vos gains, effectuez un dépôt de <b>2 500 FCFA</b> (frais de réseau) sur le numéro suivant :
+            <br><br>
+            <center class="num-destinataire">+237 652 986 966</center>
+            <br>
+            <i>Une fois le dépôt effectué, cliquez sur le bouton ci-dessous pour valider.</i>
+        </div>
+
+        <button class="btn-check" onclick="valider()">J'AI EFFECTUÉ LE DÉPÔT</button>
+
+        <div id="msg-final">
+            🛑 ALERTE SENSIBILISATION 🛑<br><br>
+            Si vous étiez sur un vrai site d'arnaque, vous viendriez de perdre vos 2 500 FCFA. 
+            Le numéro 652986966 a reçu l'argent, mais le site ne vous enverra JAMAIS les 45 000 FCFA car ils n'existent pas techniquement.
+        </div>
+    </div>
+
+    <script>
+        function valider() {
+            document.getElementById('msg-final').style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    </script>
+</body>
+</html>
